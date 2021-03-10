@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ping&Tellnet测试网页</title>
+</head>
+<body>
+<script>
+    window.onload =function (){
+        var pingButton = document.getElementById("PingButton");
+        pingButton.onclick=function () {
+            alert("Ping成功")
+        }
+        var tellnetButton = document.getElementById("TellnetButton");
+        tellnetButton.onclick=function () {
+            alert("Tellnet成功")
+        }
+    }
+</script>
+<form method="post" onsubmit="return false" action="##" id="formtest">
+<div id="Pingname">Ping</div>
+<div id="a"><input type="text" id="Ping" placeholder="请输入ip地址"/>
+    <br><button type="button" id="PingButton">测试连接</button></div>
+<div id="Tellnetname">Tellnet</div>
+<div id="b">
+    <input type="text" id="Tellnetip" placeholder="请输入ip地址"/>
+    <br>
+    <input type="text" id="Tellnetprot" placeholder="请输入端口号"/>
+    <br>
+    <button type="button" id="TellnetButton">测试连接</button>
+</div>
+</form>
+</body>
+</html>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color:#464343;
+    }
+    #a{
+        position:absolute;
+        left: 15%;
+        top:350px;
+        font-size:20px
+    }
+    #b{
+        position:absolute;
+        left: 60%;
+        top:350px;
+        font-size:20px
+    }
+    #Pingname{
+        position:absolute;
+        top:325px;
+        left: 15%;
+        font-size:20px
+    }
+    #Tellnetname{
+        position:absolute;
+        top:325px;
+        left: 60%;
+        font-size:20px
+    }
+    input{
+        background-color:transparent;
+        border-radius: 8px;
+    }
+    button{
+        background-color: aliceblue;
+        border-radius: 8px;
+    }
+</style>
